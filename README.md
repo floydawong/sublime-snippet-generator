@@ -11,10 +11,9 @@ OUTPUT_DIR_PATH = r"./snippet" # snippet输出目录
 SUFFIX = "matlab" # 在哪个语言里面补全
 ```
 
-首先, 需要一个单词列表文件
-一个单词一行
-将文件放到当前目录下
-执行`GenerateSnippet.py`
-
-得到一个snippet目录
-将该目录放到Sublime的安装路径下的`./Package/User/`里面
+首先, 需要一个单词列表文件  
+一个单词一行  
+将文件放到当前目录下  
+执行`GenerateSnippet.py`  
+得到一个snippet目录  
+将该目录放到Sublime的安装路径下的`./Package/User/`里面  
