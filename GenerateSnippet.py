@@ -7,8 +7,8 @@ import re
 import sys
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), '.'))
 
-KEYWORD_FILE_PATH = r"./matlab_function_list.txt"
-OUTPUT_DIR_PATH = r"./snippet"
+KEYWORD_FILE_PATH = "./Keywords"
+OUTPUT_DIR_PATH = "./snippet"
 SUFFIX = "matlab"
 
 SNIPPET_TEMPLATE = """\
@@ -36,8 +36,7 @@ def get_word_list(path):
 
 
 def generate_snippet(word):
-    if not os.path.exists(OUTPUT_DIR_PATH): os.mkdir(OUTPUT_DIR_PATH)
-
+    word = re.sub(' ', '', word)
     file_name = word + '.sublime-snippet'
     path = os.path.join(OUTPUT_DIR_PATH, file_name)
     with open(path, 'w') as fp:
@@ -47,6 +46,11 @@ def generate_snippet(word):
 
 
 if __name__ == '__main__':
+    try:
+        os.mkdir(OUTPUT_DIR_PATH)
+    except:
+        pass
+
     for word in get_word_list(KEYWORD_FILE_PATH):
         generate_snippet(word)
 

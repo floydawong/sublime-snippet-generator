@@ -6,9 +6,9 @@
 ## 使用说明
 修改`GenerateSnippet.py`中的
 ```Python
-KEYWORD_FILE_PATH = r"./matlab_function_list.txt" # 关键字列表文件路径
-OUTPUT_DIR_PATH = r"./snippet" # snippet输出目录
-SUFFIX = "matlab" # 在哪个语言里面补全
+KEYWORD_FILE_PATH = "./Keywords" # 关键字列表文件路径
+OUTPUT_DIR_PATH   = "./snippet"  # snippet输出目录
+SUFFIX            = "matlab"     # 在哪个语言里面补全
 ```
 
 首先, 需要一个单词列表文件  
