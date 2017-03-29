@@ -1,4 +1,4 @@
-# Auto Complete Keyword
+# Sublime Snippet Generator
 
 ## 环境
 - Python 2.6 2.7 or 3.3
